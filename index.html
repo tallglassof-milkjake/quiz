@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+
+        <title>Code Quiz</title>
+    </head>
+
+    <body>
+        <header class="p-3" style="background-color: white">
+            <a href="highscores.html">High Scores</a>
+            <span id="timer" class="float-right mr-2">Time: 0</span>
+        </header>
+        
+        <!-- Main Screen -->
+        <div class="container mt-5" id="home">
+            <div class="row justify-content-center mt-5 pt-3 pb-3">
+                <div class="col-10 col-lg-8 text-center">
+                    <h1 class="display-1">Javascript Quiz</h1> <br>
+                    <p class="lead">Try to answer the following questions about coding with JavaScript in 90 seconds. <br>
+                    If you answer incorrectly, you'll lose time! <br> 
+                    Be quick!</p>
+                    <button type="button" id="startBtn" class="btn btn-outline-primary btn-lg">START</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Questions and Answers -->
+        <div class="container mt-5 d-none" id="quiz">
+            <div class="row justify-content-center mt-5 pt-3 pb-3">
+                <div class="col-10 col-lg-8" id="QA-block">
+                    <h3 id="questions" class="question mb-4">QUESTION</h3>
+                    <ul id="answers" class="list-unstyled">
+                        <li class="answerChoice answer">A) </li>
+                        <li class="answerChoice answer">B) </li>
+                        <li class="answerChoice answer">C) </li>
+                        <li class="answerChoice answer">D) </li>
+                    </ul>
+                    <p class="feedback"></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Game Over or Finished -->
+        <div class="container mt-5 d-none" id="submit-score">
+            <div class="row text-center justify-content-center mt-5 pt-3 pb-3">
+                <div class="col-10 col-lg-8">
+                    <h2>All Done!</h2>
+                    <p id="user-score"> </p>
+                    <form class="form-group">
+                        <label for="new-score">Enter your name: </label>
+                        <input type="text" id="userName"> 
+                        <button type="button" class="btn btn-primary btn-sm submitBtn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+        <script src="questions.js"></script>
+    </body>
+</html>
